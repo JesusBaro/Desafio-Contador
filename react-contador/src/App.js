@@ -56,15 +56,21 @@ align-items: center;
 justify-content: space-evenly;
 `
 const ButtonView = styled.button`
-width: 3.5vw;
-height: 5vh;
-font-size: 1.4rem;
-text-align: center;
-border-radius: 10vh;
-background-color: black;
-border: solid white;
-color: white;
-`
+  width: 3.5vw;
+  height: 5vh;
+  font-size: 1.4rem;
+  text-align: center;
+  border-radius: 10vh;
+  background-color: black;
+  border: solid white;
+  color: white;
+  transition: all 0.5s ease-in-out;
+
+  &:hover {
+    border-color: tomato;
+    color: tomato;
+    opacity: .8;
+  }`
 
 class Contador extends Component {
   
@@ -110,10 +116,8 @@ class Contador extends Component {
 
             <BoxButtom>
               <ButtonView onClick={this.adicionar}>+</ButtonView>
-
               <ButtonView onClick={this.remover}>-</ButtonView>
             </BoxButtom>
-
           </BoxView>
 
         </BoxBackground>
